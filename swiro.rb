@@ -12,7 +12,11 @@ class Swiro < Formula
   end
 
   def install
-    mv "swiro_darwin_amd64", "swiro"
+    if Hardware::CPU.is_64_bit?
+      mv 'swiro_darwin_amd64', 'swiro'
+    else
+      mv 'swiro_darwin_386', 'swiro'
+    end
     bin.install 'swiro'
   end
 
