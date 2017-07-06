@@ -12,7 +12,8 @@ class Swiro < Formula
   end
 
   def install
-    bin.install Dir['swiro']
+    mv "swiro_darwin_amd64" "swiro"
+    bin.install 'swiro'
   end
 
   test do
