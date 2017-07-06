@@ -3,7 +3,7 @@ class Swiro < Formula
   homepage 'https://github.com/taku-k/swiro'
   version swiro_version
 
-  if Hardware.is_64_bit?
+  if Hardware::CPU.is_64_bit?
     url "https://github.com/taku-k/swiro/releases/download/v#{swiro_version}/swiro_darwin_amd64"
     sha256 'f6bcba7c577cb425554bd28a6ffd3dbcefdfe73bdbf823a5ef3fa0856d11294c'
   else
