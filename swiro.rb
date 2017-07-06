@@ -12,7 +12,7 @@ class Swiro < Formula
   end
 
   def install
-    bin.install 'swiro'
+    bin.install Dir['swiro']
   end
 
   test do
